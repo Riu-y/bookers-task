@@ -5,3 +5,25 @@ sample1
 
 sample user2
 sample2
+
+--------
+<h1>Editing Comment</h1>
+
+<%= form_for([@book_comment.book,@book_comment]) do |f| %>
+	<div class="field row">
+		<%= f.label :Comment %>
+		<%= f.text_area :comment, class: "col-xs-12 book_title" %>
+	</div>
+
+	<div class="actions row">
+		<%= f.submit class: "btn btn-primary col-xs-12" %>
+	</div>
+<% end %>
+
+<%= link_to "Show", book_path(@book_comment.book), class: "book_#{@book_comment.book.id}" %>
+<%= link_to "Back", books_path, class: "back" %>
+
+</div>
+<div class="col-md-3"></div>
+
+</div>
